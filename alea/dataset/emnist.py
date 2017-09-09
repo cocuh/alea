@@ -48,8 +48,6 @@ class EmnistDataset(Dataset):
 
     progress = tqdm(self.all_types)
     for target_type in progress:
-      progress.desc = f'processing {target_type}'
-      progress.refresh()
 
       npz_path = os.path.join(dir_dest, f'{target_type}.npz')
       mat_path = os.path.join(
