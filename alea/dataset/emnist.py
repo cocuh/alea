@@ -9,6 +9,13 @@ from alea.dataset.base import Dataset
 
 
 class EmnistDataset(Dataset):
+  '''
+  >>> import alea.dataset from EmnistDataset
+  >>> dataset = EmnistDataset()
+  >>> npz = dataset.load_or_download()
+  >>> npz['images_train'], npz['labels_train']
+  >>> npz['images_test'], npz['labels_test']
+  '''
   all_types = [
     'byclass',
     'bymerge',

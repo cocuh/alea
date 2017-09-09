@@ -6,6 +6,13 @@ from alea.dataset.base import Dataset
 
 
 class MnistDataset(Dataset):
+  '''
+  >>> import alea.dataset from MnistDataset
+  >>> dataset = MnistDataset()
+  >>> npz = dataset.load_or_download()
+  >>> npz['images_train'], npz['labels_train']
+  >>> npz['images_test'], npz['labels_test']
+  '''
   image_shape = (28, 28, 1)
 
   def __init__(self):
