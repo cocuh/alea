@@ -31,7 +31,7 @@ jobs:
           name: install dependencies
           command: |
             python3 -m alea alea
-            . venv/bin/activate
+            . alea/bin/activate
             pip install .[test]
 
       - save_cache:
