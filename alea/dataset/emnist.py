@@ -11,7 +11,7 @@ from alea.dataset.base import Dataset
 class EmnistDataset(Dataset):
   '''emnist dataset
   
-  >>> import alea.dataset from EmnistDataset
+  >>> from alea.dataset import EmnistDataset
   >>> dataset = EmnistDataset()
   >>> npz = dataset.load_or_download()
   >>> npz['images_train'], npz['labels_train']

@@ -8,7 +8,7 @@ from alea.dataset.base import Dataset
 class MnistDataset(Dataset):
   '''mnist dataset
   
-  >>> import alea.dataset from MnistDataset
+  >>> from alea.dataset import MnistDataset
   >>> dataset = MnistDataset()
   >>> npz = dataset.load_or_download()
   >>> npz['images_train'], npz['labels_train']
