@@ -1,10 +1,11 @@
 import os
-from alea.dataset.base import Dataset
+import zipfile
+
+import numpy as np
 from scipy.io import loadmat
 from tqdm import tqdm
-import numpy as np
 
-import zipfile
+from alea.dataset.base import Dataset
 
 
 class EmnistDataset(Dataset):
@@ -65,4 +66,3 @@ class EmnistDataset(Dataset):
         images_test=images_test,
         labels_test=labels_test,
       )
-

@@ -1,13 +1,11 @@
 import abc
-import tempfile
-
-import requests
-import filelock
-
 import os
-from typing import Any, Dict
 import shutil
+import tempfile
+from typing import Any, Dict
 
+import filelock
+import requests
 from tqdm import tqdm
 
 DATASET_CACHE_PATH = os.path.expanduser('~/.cache/alea/dataset')
