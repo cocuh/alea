@@ -1,11 +1,10 @@
-from unittest import SkipTest, TestCase
+from unittest import TestCase
 
-
-def setupModule():
-  raise SkipTest
+from nose.plugins.attrib import attr
 
 
 class TestMnist(TestCase):
+  @attr(speed='slow')
   def test_it(self):
     from alea.dataset.mnist import MnistDataset
     dataset = MnistDataset()
