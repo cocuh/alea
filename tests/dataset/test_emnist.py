@@ -1,8 +1,9 @@
-from unittest import TestCase, SkipTest
+from unittest import SkipTest, TestCase
 
 
 def setupModule():
   raise SkipTest
+
 
 class TestEmnist(TestCase):
   def test_it(self):
