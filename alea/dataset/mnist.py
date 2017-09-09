@@ -1,6 +1,8 @@
 import os
-from alea.dataset.base import Dataset
+
 import numpy as np
+
+from alea.dataset.base import Dataset
 
 
 class MnistDataset(Dataset):
@@ -15,6 +17,7 @@ class MnistDataset(Dataset):
   def get_download_urls(self):
     return {
       'mnist.npz': 'https://s3.amazonaws.com/img-datasets/mnist.npz',
+      # TODO: change to use http://yann.lecun.com/exdb/mnist/
     }
 
   def load(self):
