@@ -1,15 +1,15 @@
 from setuptools import find_packages, setup
 
 install_requires = [
-    'requests',
-    'numpy',
-    'tqdm',
-    'filelock',
-    'scipy',
+  'requests',
+  'numpy',
+  'tqdm',
+  'filelock',
+  'scipy',
 ]
 tests_require = [
-    'nose',
-    'coverage',
+  'nose',
+  'coverage',
 ]
 
 setup(
@@ -22,6 +22,12 @@ setup(
   tests_require=tests_require,
   extras_require={
     'test': tests_require,
+    'tf': [
+      'tensorflow',
+    ],
+    'tf-gpu': [
+      'tensorflow-gpu'
+    ],
   },
   author='cocuh',
   author_email='',
