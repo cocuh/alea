@@ -30,21 +30,21 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m alea alea
+            python3 -m venv alea
             . alea/bin/activate
             pip install .[test]
 
       - save_cache:
           paths:
-            - ./venv
+            - ./alea
           key: v1-dependencies-{{ checksum "setup.py" }}
         
       # run tests!
       - run:
           name: run tests
           command: |
-            . venv/bin/activate
-            nosetests
+            . alea/bin/activate
+            nosetests -a ''
 
 #      - store_artifacts:
 #          path: test-reports
