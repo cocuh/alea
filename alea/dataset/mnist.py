@@ -39,8 +39,8 @@ class MnistDataset(Dataset):
     data = np.load(input_npz_path)
     np.savez(
       output_npz_path,
-      images_train=data['x_train'],
+      images_train=data['x_train'][:, :, :, np.newaxis],
       labels_train=data['y_train'],
-      images_test=data['x_test'],
+      images_test=data['x_test'][:, :, :, np.newaxis],
       labels_test=data['y_test'],
     )
